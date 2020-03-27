@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css?family=Bellota+Text:300,300i,400,400i,700,700i&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: 'Bellota Text', cursive;
+    background: linear-gradient(rgba(173, 216, 230, 0.4), rgba(173, 216, 230, 0.31)) ,url("http://localhost/spotify/assets/images/music.jpg") center/cover fixed no-repeat;
+
+
+}
+.main-header{
+    background: rgba(105, 206, 215, 0.77);
+    display: inline-block;
+    border-radius: 15px 50px 30px;
+    width: 500px;
+    text-align: center;
+    text-shadow: dimgrey 1px 1px;
+
+
+
+}
+.header-title{
+    letter-spacing: 5px;
+    font-weight: bolder;
+
+}
+.header-subtitle{
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-style: italic;
+
+
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100vh;
+
+
+}
+
+.form-login{
+    margin: auto;
+    /*width: 50vh;*/
+    background: rgba(105, 206, 215, 0.77);
+    padding: 2em;
+    border-radius: 15%;
+}
+.form-register{
+    margin: auto;
+    /*width: 50vh;*/
+    background: rgba(84, 201, 211, 0.76);
+    padding: 1em;
+    border-radius: 15%;
+
+
+
+}
+.form-register>h2{
+    /*margin-top: 1em;*/
+}
+input  {
+    width: 100%;
+    border-radius: 15px 50px 30px;
+    display: flex;
+
+}
+
+input::placeholder{
+    font-family: 'Bellota Text', cursive;
+
+}
+
+label{
+    font-weight: bold;
+}
+button{
+    background: linear-gradient(lightgreen,lightblue,cornflowerblue);
+    color: black;
+    border-radius: 15%;
+    padding: 5px;
+    position: relative;
+    left: 40%;
+    text-shadow: dimgrey 1px 1px;
+    
+}
+button:hover{
+    cursor: pointer;
+}
