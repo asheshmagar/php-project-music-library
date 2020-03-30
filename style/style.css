@@ -8,7 +8,7 @@
 
 body{
     font-family: 'Bellota Text', cursive;
-    background: linear-gradient(rgba(173, 216, 230, 0.4), rgba(173, 216, 230, 0.31)) ,url("http://localhost/spotify/assets/images/music.jpg") center/cover fixed no-repeat;
+    background: linear-gradient(rgba(173, 216, 230, 0.4), rgba(173, 216, 230, 0.31)) ,url("http://localhost/php-project-music-library/assets/images/music.jpg") center/cover fixed no-repeat;
 
 
 }
@@ -19,6 +19,7 @@ body{
     width: 500px;
     text-align: center;
     text-shadow: dimgrey 1px 1px;
+    margin-bottom: 1em;
 
 
 
@@ -46,23 +47,25 @@ body{
 
 .form-login{
     margin: auto;
+
     /*width: 50vh;*/
     background: rgba(105, 206, 215, 0.77);
     padding: 2em;
     border-radius: 15%;
 }
 .form-register{
-    margin: auto;
-    /*width: 50vh;*/
+    margin: 1em auto;
+    width: 100vh;
     background: rgba(84, 201, 211, 0.76);
     padding: 1em;
     border-radius: 15%;
 
 
 
+
 }
 .form-register>h2{
-    /*margin-top: 1em;*/
+    text-align: center;
 }
 input  {
     width: 100%;
@@ -79,16 +82,29 @@ input::placeholder{
 label{
     font-weight: bold;
 }
-button{
+
+
+.form-register button{
+    position:relative;
+    text-align: center;
+    left: 45%;
     background: linear-gradient(lightgreen,lightblue,cornflowerblue);
     color: black;
     border-radius: 15%;
-    padding: 5px;
-    position: relative;
-    left: 40%;
     text-shadow: dimgrey 1px 1px;
-    
+    padding: 5px;
 }
-button:hover{
+.form-register button:hover{
     cursor: pointer;
+}
+
+.form-login button{
+    position:relative;
+    text-align: center;
+    left: 35%;
+    background: linear-gradient(lightgreen,lightblue,cornflowerblue);
+    color: black;
+    border-radius: 15%;
+    text-shadow: dimgrey 1px 1px;
+    padding: 5px;
 }
