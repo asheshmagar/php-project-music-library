@@ -17,7 +17,7 @@
 
             if(empty($this->errorArray)){
                 //insert into db
-                return insertUserDetail($un,$fn,$ln,$em,$pw);
+                return insertUserDetails($un,$fn,$ln,$em,$pw);
             }else{
                 return false;
             }
@@ -30,17 +30,13 @@
             return "<span class='errorMessage'>$error</span>";
         }
 
-        /**
-         * @param $un
-         * @param $fn
-         * @param $ln
-         * @param $em
-         * @param $pw
-         */
-        private function insertUserDetail($un, $fn, $ln, $em, $pw){
-            $encryptedPw = md5 ($pw);
-            $profilePic = "";
 
+        public function insertUserDetails($un, $fn, $ln, $em, $pw){
+            $encryptedPw = md5 ($pw);
+            $profilePic = "assets/images/profile-pics/profile_pic.jpg";
+            $date = date("Y-n-d");
+            $result = mysql_query($this->con,"INSERT INTO users VALUE("","$un","$fn","$ln","$em","$encryptedPw","$date","$profilePic")");
+            return $result;
         }
         private function validateUsername($un){
             if (strlen($un) > 25 || strlen($un) < 5){
