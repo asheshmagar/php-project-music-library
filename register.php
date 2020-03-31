@@ -62,7 +62,6 @@ function getInputValue($name){
                 echo $account -> getError ( Constants::$usernameTaken );
                 ?>
                 <br />
-                <br />
 
                 <label for="registerUsername">Username</label>
                 <input type="text" id="registerUsername" name="registerUsername" placeholder="Enter your username."
@@ -79,7 +78,7 @@ function getInputValue($name){
                 ?>
                 <label for="lastName">Last Name</label>
                 <input type="text" id="lastName" name="lastName" placeholder="Last Name" value="<?php getInputValue('lastName') ?>" required>
-                <br />
+
                 <?php
                 echo $account -> getError ( Constants::$emailDoNotMatch );
                 ?>

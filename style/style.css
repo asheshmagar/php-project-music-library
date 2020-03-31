@@ -8,6 +8,7 @@
 
 body{
     font-family: 'Bellota Text', cursive;
+    color: midnightblue;
     background: linear-gradient(rgba(173, 216, 230, 0.4), rgba(173, 216, 230, 0.31)) ,url("http://localhost/php-project-music-library/assets/images/music.jpg") center/cover fixed no-repeat;
 
 
@@ -69,13 +70,19 @@ body{
 }
 input  {
     width: 100%;
-    border-radius: 15px 50px 30px;
-    display: flex;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid midnightblue;
+    display: block;
+    height: 2em;
 
 }
 
+
 input::placeholder{
     font-family: 'Bellota Text', cursive;
+    color: white;
 
 }
 
@@ -85,26 +92,35 @@ label{
 
 
 .form-register button{
-    position:relative;
+    display:block;
+    margin: auto ;
     text-align: center;
-    left: 45%;
+    width: 90%;
+    height:50px;
     background: linear-gradient(lightgreen,lightblue,cornflowerblue);
-    color: black;
-    border-radius: 15%;
+    color: midnightblue;
+    border-radius: 200px;
     text-shadow: dimgrey 1px 1px;
-    padding: 5px;
+    letter-spacing: 5px;
+    font-weight: bold;
+    font-size: 1em;
 }
 .form-register button:hover{
     cursor: pointer;
 }
 
 .form-login button{
-    position:relative;
+    display: block;
     text-align: center;
-    left: 35%;
     background: linear-gradient(lightgreen,lightblue,cornflowerblue);
-    color: black;
-    border-radius: 15%;
+    color: midnightblue;
+    border-radius: 200px;
     text-shadow: dimgrey 1px 1px;
-    padding: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    letter-spacing: 5px;
+    width: 90%;
+    margin: auto;
+    height: 50px;
+
 }
