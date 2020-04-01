@@ -9,22 +9,21 @@
 body{
     font-family: 'Bellota Text', cursive;
     color: midnightblue;
-    background: linear-gradient(rgba(173, 216, 230, 0.4), rgba(173, 216, 230, 0.31)) ,url("http://localhost/php-project-music-library/assets/images/music.jpg") center/cover fixed no-repeat;
+    background:url("http://localhost/php-project-music-library/assets/images/music.jpg") center/cover fixed no-repeat;
 
 
 }
 .main-header{
     background: rgba(105, 206, 215, 0.77);
-    display: inline-block;
-    border-radius: 15px 50px 30px;
+    display: block;
+    border-radius: 200px;
     width: 500px;
     text-align: center;
     text-shadow: dimgrey 1px 1px;
-    margin-bottom: 1em;
-
-
-
+    margin: 1em auto;
 }
+
+
 .header-title{
     letter-spacing: 5px;
     font-weight: bolder;
@@ -47,26 +46,34 @@ body{
 }
 
 .form-login{
-    margin: auto;
-
+    margin: 1em auto;
+    height: 350px;
     /*width: 50vh;*/
     background: rgba(105, 206, 215, 0.77);
     padding: 2em;
-    border-radius: 15%;
+    border-radius: 5%;
 }
 .form-register{
-    margin: 1em auto;
-    width: 100vh;
+    margin:  auto;
     background: rgba(84, 201, 211, 0.76);
-    padding: 1em;
-    border-radius: 15%;
-
-
+    padding: 2em;
+    border-radius: 5%;
+    width: 500px;
+}
+.form-text{
+    color: inherit;
+    background: rgba(84, 201, 211, 0.76);
+    border-radius: 5%;
+    width: 400px ;
+    padding: 2em 0 0 2em ;
+    height: 250px;
+    margin: 1em auto;
 
 
 }
 .form-register>h2{
     text-align: center;
+
 }
 input  {
     width: 100%;
@@ -91,7 +98,7 @@ label{
 }
 
 
-.form-register button{
+.form-login button,.form-register button{
     display:block;
     margin: auto ;
     text-align: center;
@@ -109,18 +116,24 @@ label{
     cursor: pointer;
 }
 
-.form-login button{
+/*.form-login button{*/
+/*    display: block;*/
+/*    text-align: center;*/
+/*    background: linear-gradient(lightgreen,lightblue,cornflowerblue);*/
+/*    color: midnightblue;*/
+/*    border-radius: 200px;*/
+/*    text-shadow: dimgrey 1px 1px;*/
+/*    font-size: 1em;*/
+/*    font-weight: bold;*/
+/*    letter-spacing: 5px;*/
+/*    width: 90%;*/
+/*    margin: auto;*/
+/*    height: 50px;*/
+/*}*/
+.hasAccountText{
     display: block;
     text-align: center;
-    background: linear-gradient(lightgreen,lightblue,cornflowerblue);
-    color: midnightblue;
-    border-radius: 200px;
-    text-shadow: dimgrey 1px 1px;
-    font-size: 1em;
-    font-weight: bold;
-    letter-spacing: 5px;
-    width: 90%;
     margin: auto;
-    height: 50px;
-
+    cursor: pointer;
+    padding-top: 1em;
 }
