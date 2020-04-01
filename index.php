@@ -1,23 +1,13 @@
-<?php
-    include "includes/config.php";
-//    session_destroy();
-    if(isset($_SESSION['userLoggedIn'])){
-        $userLoggedIn = $_SESSION['userLoggedIn'];
-    }
-    else{
-        header("Location: register.php");
-    }
-?>
+<?php include "includes/header.php"; ?>
+    <h2>You Might also Like</h2>
+    <div class="grid-view-container">
+        <?php
+            $albumQuery = mysqli_query($con,"select * from albums");
+            while($row = mysqli_fetch_array($albumQuery)){
+                echo $row['title'] . "<br>";
+            }
+        ?>
+    </div>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Spotify</title>
-</head>
-<body>
 
-  
-</body>
-</html>
+<?php include "includes/footer.php"; ?>
