@@ -21,11 +21,31 @@ function getInputValue($name){
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Welcome to Spotify</title>
         <link rel="stylesheet" href="./style/style.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="assets/js/register.js"></script>
     </head>
 
     <body>
-        <header class="main-header">
+    <?php
+        if(isset($_POST['registerButton'])){
+            echo '<script>
+                    $(document).ready(function () {
+                        $("#loginForm").hide();
+                        $("#registerForm").show();
+                    });
+                   </script>';
+        }else{
+            echo '<script>
+                    $(document).ready(function () {
+                        $("#loginForm").show();
+                        $("#registerForm").hide();
+                    });
+                   </script>';
+        }
+    ?>
 
+        <header class="main-header">
             <section class="header-title">
                 <h1>Music For Life</h1>
             </section>
@@ -33,9 +53,18 @@ function getInputValue($name){
                 <p>access free unlimited high quality music FOREVER!</p>
 
             </section>
-
         </header>
         <div id="inputContainer" class="container">
+            <div class="form-text">
+                <h1>Get quality music for free!!</h1>
+                <ul>
+                    <li>Explore and find the music that calms your Soul !!</li>
+                    <li>Listen to your favourite music anywhere & anytime!!</li>
+                    <li>Create your own playlist.</li>
+                </ul>
+
+
+            </div>
             <form id="loginForm" action="register.php" method="POST" class="form-login">
                 <h2>Login to your account</h2>
                 <?php
@@ -44,7 +73,7 @@ function getInputValue($name){
                 <br />
 
                 <label for="loginUsername">Username</label>
-                <input type="text" id="loginUsername" name="loginUsername" placeholder="Enter your username." required>
+                <input type="text" id="loginUsername" name="loginUsername" placeholder="Enter your username." value="<?php getInputValue('loginUsername') ?>" required>
                 <br />
                 <label for="loginPassword">Password</label>
 
@@ -52,6 +81,13 @@ function getInputValue($name){
                     required>
                 <br />
                 <button type="submit" name="loginButton">Login</button>
+                <div class="hasAccountText">
+                    <span id="hideLogin">
+                        Don't have an account yet?
+                        <br/>
+                        Click here to Sign Up.
+                    </span>
+                </div>
             </form>
             <form id="registerForm" action="register.php" method="POST" class="form-register">
                 <h2>Create account</h2>
@@ -61,8 +97,6 @@ function getInputValue($name){
                 ?><?php
                 echo $account -> getError ( Constants::$usernameTaken );
                 ?>
-                <br />
-
                 <label for="registerUsername">Username</label>
                 <input type="text" id="registerUsername" name="registerUsername" placeholder="Enter your username."
                     required value="<?php getInputValue('registerUsername') ?>">
@@ -113,7 +147,16 @@ function getInputValue($name){
                     placeholder="Re-Enter your password." required>
                 <br />
                 <button type="submit" name="registerButton">Sign Up</button>
+                <div class="hasAccountText">
+                    <span id="hideRegister">
+                        Already have an account?
+                        <br/>
+                        Click here to Login In
+                    </span>
+                </div>
             </form>
+
+
         </div>
     </body>
 
