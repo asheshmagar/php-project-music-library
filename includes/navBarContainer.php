@@ -1,6 +1,6 @@
 <div id="navBarContainer">
     <nav class="nav-bar">
-        <a href="../index.php" class="logo">
+        <a href="index.php" class="logo">
             <img src="assets/images/icons/logo.png" alt="">
         </a>
         <div class="group">
