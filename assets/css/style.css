@@ -216,3 +216,30 @@ body {
 .grid-view-item a{
   text-decoration: none;
 }
+
+.entity-info{
+  padding: 40px 0 10px 0;
+  display: inline-block;
+  width: 100% ;
+}
+.entity-info .left-section{
+  width: 30%;
+  float: left;
+  max-width: 250px;
+}
+.left-section img{
+  width: 100%;
+}
+.entity-info .right-section{
+    width: 70%;
+  float: left;
+  padding: 5px 10px 5px 40px;
+  box-sizing: border-box;
+}
+.right-section h2{
+  margin-top: 0;
+}
+.right-section span{
+  color: #939393;
+  font-weight: 200;
+}
