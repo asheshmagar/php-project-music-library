@@ -35,4 +35,17 @@ class Album {
     {
         return $this->genre;
     }
+    public  function getNumberOfSongs(){
+        $query = mysqli_query($this->con,"select id from songs where album='$this->id'");
+        return mysqli_num_rows($query);
+
+    }
+    public function getSongIds(){
+        $query = mysqli_query($this->con, "select id from songs where album='$this->id' order by albumOrder ASC ");
+        $array = array();
+        while($row = mysqli_fetch_array($query)){
+            array_push($array,$row['id']);
+        }
+        return $array;
+    }
 }
